@@ -1,6 +1,6 @@
 import Heroimg from "../assets/images/Header.png";
 import PlaneIcon from "../assets/images/plane.svg";
-import MoneybackIcon from "../assets/images/Moneyback.svg";
+import MoneybackIcon from "../assets/images/moneyback.svg";
 import SupportIcon from "../assets/images/support.svg";
 import PaymentIcon from "../assets/images/payment.svg";
 
