@@ -6,9 +6,22 @@ import Profile from "../assets/images/profile.svg";
 import Heart from "../assets/images/heart.svg";
 import Cart from "../assets/images/cart.svg";
 
-const header = () => {
-
-    const items=["Offers","Earrings","Devotional","Bangle","Bracelet","Platinum","Solitaire","Pendant","Rings","Nosepin","Couple Band","Necklace","Navaratna"]
+const Navbar = () => {
+  const items = [
+    "Offers",
+    "Earrings",
+    "Devotional",
+    "Bangle",
+    "Bracelet",
+    "Platinum",
+    "Solitaire",
+    "Pendant",
+    "Rings",
+    "Nosepin",
+    "Couple Band",
+    "Necklace",
+    "Navaratna",
+  ];
 
   return (
     <div className="bg-[#E7F66C] w-full">
@@ -43,19 +56,15 @@ const header = () => {
         </div>
       </div>
 
-
-<div className="flex gap-4 justify-between overflow-x-auto px-3 no-scrollbar">
-  {items.map((item) => (
-    <p key={item} className="hover:underline text-sm">
-      {item}
-    </p>
-  ))}
-</div>
-
-
-
+      <div className="flex gap-4 justify-between overflow-x-auto px-3 no-scrollbar">
+        {items.map((item) => (
+          <p key={item} className="hover:underline text-sm">
+            {item}
+          </p>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default header;
+export default Navbar;

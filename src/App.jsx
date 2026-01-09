@@ -1,13 +1,13 @@
 import React from 'react'
-import Header from './components/header'
 import Hero from './components/Hero'
 import Shopping from './components/Shopping'
 import Newarrivals from './components/Newarrivals'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Navbar/>
       <Hero/>
       <Shopping/>
       <Newarrivals/>
