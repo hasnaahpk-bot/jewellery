@@ -6,7 +6,7 @@ import Profile from "../assets/images/profile.svg";
 import Heart from "../assets/images/heart.svg";
 import Cart from "../assets/images/cart.svg";
 
-const Header = () => {
+const header = () => {
 
     const items=["Offers","Earrings","Devotional","Bangle","Bracelet","Platinum","Solitaire","Pendant","Rings","Nosepin","Couple Band","Necklace","Navaratna"]
 
@@ -58,4 +58,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default header;
