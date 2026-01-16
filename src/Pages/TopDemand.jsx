@@ -18,15 +18,19 @@ const TopDemanded = () => {
   ];
 
   return (
-    <section className="bg-[#0f0f0f] py-12 px-6">
+    <section className="bg-[#0f0f0f] py-8 sm:py-12 px-4 sm:px-6">
       {/* Header */}
-      <div className="text-center mb-10">
-        <h2 className="text-xl font-semibold text-white">Top Demanded Items</h2>
-        <p className="text-xs text-gray-400 mt-1">234 New item added</p>
+      <div className="text-center mb-6 sm:mb-10">
+        <h2 className="text-lg sm:text-xl font-semibold text-white">
+          Top Demanded Items
+        </h2>
+        <p className="text-xs text-gray-400 mt-1">
+          234 New item added
+        </p>
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((item) => (
           <div
             key={item.id}
@@ -34,48 +38,38 @@ const TopDemanded = () => {
               relative
               rounded-2xl
               bg-[#0b0b0b]
-              p-4
+              p-3 sm:p-4
               border
               border-[#d6ff3f]/25
               overflow-hidden
               transition-transform
-              h-[380px]
+              min-h-[300px]
+              sm:min-h-[360px]
             "
           >
-            {/* LOW inner glow (subtle, controlled) */}
-            <div
-              className="
-                absolute
-                inset-0
-                rounded-2xl
-                bg-[radial-gradient(ellipse_at_center,rgba(214,255,63,0.08)_0%,rgba(0,0,0,0)_70%)]
-                pointer-events-none
-              "
-            />
+            {/* glow */}
+            <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_center,rgba(214,255,63,0.08)_0%,rgba(0,0,0,0)_70%)] pointer-events-none" />
+            <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d6ff3f]/35 pointer-events-none" />
 
-            {/* Soft neon edge (not overpowering) */}
-            <div
-              className="
-                absolute
-                inset-0
-                rounded-2xl
-                ring-1
-                ring-[#d6ff3f]/35
-                pointer-events-none
-              "
-            />
+            {/* image */}
+            <div className="h-[140px] sm:h-[170px] flex items-center justify-center relative z-10 mb-3">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="max-h-full object-contain transition-transform duration-300 hover:scale-105"
+              />
+            </div>
 
-            <img
-              src={item.image}
-              alt={item.name}
-              className="mx-auto object-contain mb-4 relative z-10 hover:scale-105 "
-            />
-
+            {/* info */}
             <div className="text-center space-y-1 relative z-10">
-              <p className="text-lg text-gray-200">{item.name}</p>
-              <p className="text-sm text-gray-500">{item.sku}</p>
+              <p className="text-sm sm:text-base text-gray-200 truncate">
+                {item.name}
+              </p>
+              <p className="text-xs text-gray-500">
+                {item.sku}
+              </p>
 
-              <div className="flex justify-center py-4 gap-2 text-sm mt-2">
+              <div className="flex justify-center gap-2 text-xs sm:text-sm mt-3">
                 <span className="text-[#d6ff3f] font-semibold">
                   ₹{item.price}
                 </span>
@@ -89,8 +83,12 @@ const TopDemanded = () => {
       </div>
 
       {/* Banner */}
-      <div className="w-full max-w-7xl mx-auto py-12">
-        <img src={Banner2} alt="Banner" />
+      <div className="w-full max-w-7xl mx-auto py-8 sm:py-12">
+        <img
+          src={Banner2}
+          alt="Banner"
+          className="w-full rounded-xl object-cover"
+        />
       </div>
     </section>
   );
