@@ -1,0 +1,15 @@
+export const NavbarItems = [
+    "Offers",
+    "Earrings",
+    "Devotional",
+    "Bangle",
+    "Bracelet",
+    "Platinum",
+    "Solitaire",
+    "Pendant",
+    "Rings",
+    "Nosepin",
+    "Couple Band",
+    "Necklace",
+    "Navaratna",
+  ];

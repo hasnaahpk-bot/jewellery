@@ -17,4 +17,11 @@
   display: none;                /* Chrome, Safari */
 }
 
+@layer utilities {
+  .bg-radial-gradient {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
+}
+
+
 

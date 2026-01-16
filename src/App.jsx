@@ -1,18 +1,33 @@
-import React from 'react'
-import Hero from './components/Hero'
-import Shopping from './components/Shopping'
-import Newarrivals from './components/Newarrivals'
-import Navbar from './components/Navbar'
+
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./Pages/Home";
+import Allproducts from "./components/Allproducts";
+import AppDownloadBanner from "./components/AppDownloadBanner";
+import Cart from "./components/Cart";
+import Wishlist from "./components/Wishlist";
+import ProductDetails from "./components/ProductDetails";
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <Shopping/>
-      <Newarrivals/>
-    </div>
-  )
-}
+    <>
+      <Navbar />
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/seeall" element={<Allproducts />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+
+      </Routes>
+      {/* <AppDownloadBanner /> */}
+      <Footer />
+    </>
+  );
+};
+
+export default App;
